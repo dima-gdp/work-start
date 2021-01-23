@@ -17,3 +17,15 @@ $minwidth: 320px;
 	$addSize: $startSize - $minSize;
 	#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$min-width + px}) / (#{$max-width - #{$min-width}})));
 }
+
+@mixin mail {
+	a[href^="mailto:"] {
+		@content;
+	}
+}
+
+@mixin tel {
+	a[href^="tel:"] {
+		@content;
+	}
+}

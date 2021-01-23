@@ -11,7 +11,7 @@ $(document).ready(function () {
 	// 	});
 	// });
 
-	// $("#to-privacy").on('click', function () {
+	// $(".to-privacy").on('click', function () {
 	// 	$.fancybox.open({
 	// 		src: '#modal-polit',
 	// 		touch: 'false',
@@ -39,12 +39,8 @@ $(document).ready(function () {
 	// })
 
 	// $(document).click(function (ev) {
-	// 	if (!ev.target.closest('.header__burger')) {
-
-	// 		if (!ev.target.closest('.mob-menu')) {
-	// 			mobMenu.removeClass('active')
-	// 		}
-
+	// 	if (!ev.target.closest('.header__burger') && !ev.target.closest('h1')) {
+	// 		mobMenu.removeClass('active')
 	// 	}
 	// })
 

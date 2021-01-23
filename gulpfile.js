@@ -39,6 +39,7 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const del = require('del');
 const tinypng = require('gulp-tinypng-compress');
+const media = require('gulp-group-css-media-queries');
 
 function browserSync() {
 	browsersync.init({
@@ -72,6 +73,7 @@ function libs_css() {
 function scss_dev() {
 	return src(path.src.scss)
 		.pipe(sass({ outputStyle: 'expanded' }))
+		.pipe(media())
 		.pipe(autoprefixer({
 			overrideBrowserslist: ['last 5 versions'],
 			cascade: true
