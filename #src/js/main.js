@@ -1,28 +1,29 @@
 $(document).ready(function () {
 	// objectFitImages();
 
-	// Alertify
-	// alertify.set('notifier', 'position', 'bottom-right');
-	// alertify.set('notifier', 'delay', 10);
+	 // Табы
+		// function tabs(buttonsList, wrapper, tabBlock) {
+		// 	$(buttonsList).on('click', 'li:not(.active)', function () {
+		// 		$(this).addClass('active').siblings().removeClass('active')
+		// 			.closest(wrapper).find(tabBlock).removeClass('active').eq($(this).index()).addClass('active');
+		// 	})
+		// }
 
-	// document.addEventListener('wpcf7mailsent', function (event) {
-	// 	alertify.success(event.detail.apiResponse.message)
-	// }, false);
+			// function toggleTabs(top, bottom, topActive) {
+	// 	$(top).on('click', function (ev) {
+	// 		let text = $(this).next(bottom);
 
-	// document.addEventListener('wpcf7invalid', function (event) {
-	// 	alertify.warning(event.detail.apiResponse.message);
-	// }, false);
-
-	// document.addEventListener('wpcf7mailfailed', function (event) {
-	// 	alertify.error(event.detail.apiResponse.message);
-	// }, false);
-
-	// $(document).on('click', '.wpcf7-submit', function (e) {
-	// 	if ($('.ajax-loader').hasClass('is-active')) {
-	// 		e.preventDefault();
-	// 		return false;
-	// 	}
-	// });
+	// 		if ($(this).hasClass(topActive)) {
+	// 			text.stop().slideUp();
+	// 			$(this).removeClass(topActive)
+	// 		}
+	// 		else {
+	// 			$(this).addClass(topActive)
+	// 			text.stop().slideDown();
+	// 		}
+	// 	})
+	// }
+	
 
 	// Swiper
 	// const slider_pag = new Swiper('.pag-hero__slider', {
@@ -58,32 +59,26 @@ $(document).ready(function () {
 
 
 	// Fancy-box
-	// $(".to-modal").on('click', function () {
-	// 	$.fancybox.open({
-	// 		src: '#modal',
-	// 		touch: 'false',
-	// 		smallBtn: false,
-	// 		buttons: '',
-	// 	});
+
+	// $('[data-fancybox="to-modal"]').fancybox({
+	// 	src: '#modal',
+	// 	touch: 'false',
+	// 	smallBtn: false,
+	// 	buttons: '',
 	// });
 
-	// $(".to-privacy").on('click', function () {
-	// 	$.fancybox.open({
-	// 		src: '#modal-polit',
-	// 		touch: 'false',
-	// 		smallBtn: false,
-	// 		buttons: '',
-	// 	});
+	// $('[data-fancybox="to-privacy"]').fancybox({
+	// 	src: '#modal',
+	// 	touch: 'false',
+	// 	smallBtn: false,
+	// 	buttons: '',
 	// });
 
 	// Input-mask
 	// $('input[type="tel"]').inputmask({ "mask": "+7 (999)-999-99-99" });
 
-	// // Табы
-	// $('ul.tabs__list').on('click', 'li:not(.active)', function () {
-	// 	$(this).addClass('active').siblings().removeClass('active')
-	// 		.closest('div.tabs').find('div.tabs__block').removeClass('active').eq($(this).index()).addClass('active');
-	// })
+
+
 
 	// Menu-burger
 	// burger.click(function () {
@@ -99,6 +94,53 @@ $(document).ready(function () {
 	// 		mobMenu.removeClass('active')
 	// 	}
 	// })
+
+	// Яндекс карта
+	// ymaps.ready(function () {
+	// 	var myMap = new ymaps.Map(getMap, {
+	// 		center: [52.05693880953456, 118.68705543322154],
+	// 		zoom: 4
+	// 	});
+
+	// 	var myPlacemark = new ymaps.Placemark([55.54055193739615, 108.71146949572154], {
+	// 		hintContent: 'г. Борисоглебск, ул. Победы, д. 66',
+	// 		balloonContent: 'г. Борисоглебск, ул. Победы, д. 66'
+	// 	},
+	// 		{
+	// 			preset: 'islands#redIcon',
+	// 			iconLayout: 'default#image',
+	// 			iconImageSize: [20, 28],
+	// 			iconImageOffset: [-19, -52]
+	// 		});
+
+	// 	myMap.geoObjects.add(myPlacemark);
+	// });
+
+
+	// Alertify
+	// alertify.set('notifier', 'position', 'bottom-right');
+	// alertify.set('notifier', 'delay', 10);
+
+	// document.addEventListener('wpcf7mailsent', function (event) {
+	// 	alertify.success(event.detail.apiResponse.message)
+	// }, false);
+
+	// document.addEventListener('wpcf7invalid', function (event) {
+	// 	alertify.warning(event.detail.apiResponse.message);
+	// }, false);
+
+	// document.addEventListener('wpcf7mailfailed', function (event) {
+	// 	alertify.error(event.detail.apiResponse.message);
+	// }, false);
+
+	// $(document).on('click', '.wpcf7-submit', function (e) {
+	// 	if ($('.ajax-loader').hasClass('is-active')) {
+	// 		e.preventDefault();
+	// 		return false;
+	// 	}
+	// });
+
+
 
 
 
