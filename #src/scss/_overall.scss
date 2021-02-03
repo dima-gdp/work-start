@@ -58,6 +58,28 @@ body {
 	margin-bottom: 0 !important;
 }
 
+div.wpcf7-response-output,
+div.wpcf7-validation-errors,
+div.wpcf7 .ajax-loader {
+	display: none !important;
+}
+
+span.wpcf7-not-valid-tip {
+	display: none;
+}
+
+.alertify-notifier {
+	z-index: 99997;
+}
+
+.wpcf7-not-valid {
+	border-color: red !important;
+}
+
+input[type="submit"] {
+	cursor: pointer;
+}
+
 // Анимации
 
 @keyframes gallery {
