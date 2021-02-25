@@ -1,15 +1,15 @@
 $(document).ready(function () {
 	// objectFitImages();
 
-	 // Табы
-		// function tabs(buttonsList, wrapper, tabBlock) {
-		// 	$(buttonsList).on('click', 'li:not(.active)', function () {
-		// 		$(this).addClass('active').siblings().removeClass('active')
-		// 			.closest(wrapper).find(tabBlock).removeClass('active').eq($(this).index()).addClass('active');
-		// 	})
-		// }
+	// Табы
+	// function tabs(buttonsList, wrapper, tabBlock) {
+	// 	$(buttonsList).on('click', 'li:not(.active)', function () {
+	// 		$(this).addClass('active').siblings().removeClass('active')
+	// 			.closest(wrapper).find(tabBlock).removeClass('active').eq($(this).index()).addClass('active');
+	// 	})
+	// }
 
-			// function toggleTabs(top, bottom, topActive) {
+	// function toggleTabs(top, bottom, topActive) {
 	// 	$(top).on('click', function (ev) {
 	// 		let text = $(this).next(bottom);
 
@@ -23,7 +23,7 @@ $(document).ready(function () {
 	// 		}
 	// 	})
 	// }
-	
+
 
 	// Swiper
 	// const slider_pag = new Swiper('.pag-hero__slider', {
@@ -57,21 +57,57 @@ $(document).ready(function () {
 	// 	}
 	// });
 
+	// function mobileSlider() {
+	// 	if ($(window).innerWidth() <= 1100) {
+	// 		slider_product_main = new Swiper('.new__slider', {
+	// 			slidesPerView: 2,
+	// 			spaceBetween: 40,
+	// 			navigation: {
+	// 				nextEl: '.new-slider--prev',
+	// 				prevEl: '.new-slider--next',
+	// 			},
+	// 			breakpoints: {
+	// 				320: {
+	// 					slidesPerView: 1,
+	// 					spaceBetween: 45,
+	// 				},
+	// 				376: {
+	// 					slidesPerView: 1,
+	// 					spaceBetween: 45,
+	// 				},
+	// 				630: {
+	// 					slidesPerView: 2,
+	// 					spaceBetween: 45,
+	// 				},
+	// 			}
+	// 		});
+	// 	}
+
+	// 	else {
+	// 		if ($('.new__slider').hasClass('swiper-container-initialized')) {
+	// 			slider_catalog.destroy();
+	// 		}
+	// 	}
+	// }
 
 	// Fancy-box
 
-	// $('[data-fancybox="to-modal"]').fancybox({
-	// 	src: '#modal',
+	// $('[data-src="#modal-polit"]').fancybox({
 	// 	touch: 'false',
 	// 	smallBtn: false,
 	// 	buttons: '',
 	// });
 
-	// $('[data-fancybox="to-privacy"]').fancybox({
-	// 	src: '#modal',
+	// $('[data-src="#home-modal"]').fancybox({
 	// 	touch: 'false',
 	// 	smallBtn: false,
 	// 	buttons: '',
+	// });
+
+	// $('[data-fancybox="gal"]').fancybox({
+	// backFocus: false,
+	// autoFocus: false,
+	// hash: false,
 	// });
 
 	// Input-mask

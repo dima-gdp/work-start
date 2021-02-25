@@ -80,6 +80,13 @@ input[type="submit"] {
 	cursor: pointer;
 }
 
+[data-src="#modal-call"] {
+	cursor: pointer;
+}
+[data-src="#modal"] {
+	cursor: pointer;
+}
+
 .cross {
 	width: 14px;
 	height: 14px;
