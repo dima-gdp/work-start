@@ -7,6 +7,7 @@ const path = {
 		libs_css: project_folder + "/css/",
 		js: project_folder + "/js/",
 		img: project_folder + "/img/",
+		svg: project_folder + "/svg/",
 		fonts: project_folder + "/fonts/",
 		favicon: project_folder + "/favicon/",
 	},
@@ -16,6 +17,7 @@ const path = {
 		libs_css: source_folder + "/css/*",
 		js: [source_folder + "/js/*.js", "!" + source_folder + "/js/_*.js"],
 		img: source_folder + "/img/**/*.{jpg,png,webp,svg,gif}",
+		svg: source_folder + "/svg/*",
 		fonts: source_folder + "/fonts/*.{woff,woff2}",
 		favicon: source_folder + "/favicon/*",
 	},
@@ -24,6 +26,7 @@ const path = {
 		scss: source_folder + "/scss/**/*.scss",
 		js: source_folder + "/js/**/*.js",
 		img: source_folder + "/img/**/*.{jpg,png,webp,svg,gif}",
+		svg: source_folder + "/svg/*",
 		libs_css: source_folder + "/css/*",
 		fonts: source_folder + "/fonts/*.{woff,woff2}",
 		favicon: source_folder + "/favicon/*",
@@ -109,6 +112,12 @@ function favicon() {
 		.pipe(browsersync.stream())
 }
 
+function svg() {
+	return src(path.src.svg)
+		.pipe(dest(path.build.svg))
+		.pipe(browsersync.stream())
+}
+
 function watchingFiles() {
 	gulp.watch([path.watch.html], html);
 	gulp.watch([path.watch.scss], scss_dev);
@@ -117,16 +126,18 @@ function watchingFiles() {
 	gulp.watch([path.watch.libs_css], libs_css);
 	gulp.watch([path.watch.fonts], fonts);
 	gulp.watch([path.watch.favicon], favicon);
+	gulp.watch([path.watch.svg], svg);
 }
 
 function clean() {
 	return del(path.clean);
 }
 
-const dev = gulp.series(clean, fonts, favicon, libs_css, images_dev, gulp.parallel(html, scss_dev, js_dev, watchingFiles, browserSync));
-const build = gulp.series(clean, fonts, favicon, libs_css, images_build, gulp.parallel(html, scss_dev, js_dev));
+const dev = gulp.series(clean, svg, fonts, favicon, libs_css, images_dev, gulp.parallel(html, scss_dev, js_dev, watchingFiles, browserSync));
+const build = gulp.series(clean, svg, fonts, favicon, libs_css, images_build, gulp.parallel(html, scss_dev, js_dev));
 
 exports.favicon = favicon;
+exports.svg = svg;
 exports.libs_css = libs_css;
 exports.fonts = fonts;
 exports.images_dev = images_dev;

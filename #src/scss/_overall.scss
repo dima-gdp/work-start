@@ -58,6 +58,14 @@ body {
 	margin-bottom: 0 !important;
 }
 
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 10px 15px;
+}
+
 div.wpcf7-response-output,
 div.wpcf7-validation-errors,
 div.wpcf7 .ajax-loader {
@@ -85,35 +93,6 @@ input[type="submit"] {
 }
 [data-src="#modal"] {
 	cursor: pointer;
-}
-
-.cross {
-	width: 14px;
-	height: 14px;
-	flex: 0 0 14px;
-	position: relative;
-	background-color: transparent;
-
-	&::after,
-	&::before {
-		content: "";
-		position: absolute;
-		background: #000;
-	}
-	&::after {
-		top: 50%;
-		left: 0;
-		transform: translateY(-50%);
-		width: 100%;
-		height: 2px;
-	}
-	&::before {
-		top: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		width: 2px;
-		height: 100%;
-	}
 }
 
 // Анимации
