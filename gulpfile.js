@@ -34,7 +34,7 @@ const path = {
 	clean: './' + project_folder + "/"
 };
 
-const { src, dest } = require('gulp');
+const { src, dest, parallel } = require('gulp');
 const gulp = require('gulp');
 const fileinclude = require('gulp-file-include');
 const browsersync = require('browser-sync').create();
@@ -43,6 +43,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const del = require('del');
 const tinypng = require('gulp-tinypng-compress');
 const media = require('gulp-group-css-media-queries');
+const svgSprite = require('gulp-svg-sprite');
 
 function browserSync() {
 	browsersync.init({
@@ -53,6 +54,19 @@ function browserSync() {
 		notify: false
 	})
 };
+
+function svg_sprite() {
+	return src(path.src.svg)
+		.pipe(svgSprite({
+			mode: {
+				stack: {
+					sprite: '../sprite.svg',
+					example: true
+				}
+			}
+		}))
+		.pipe(dest(path.build.svg))
+}
 
 function html() {
 	return src(path.src.html)
@@ -126,18 +140,19 @@ function watchingFiles() {
 	gulp.watch([path.watch.libs_css], libs_css);
 	gulp.watch([path.watch.fonts], fonts);
 	gulp.watch([path.watch.favicon], favicon);
-	gulp.watch([path.watch.svg], svg);
+	gulp.watch([path.watch.svg], parallel(svg, svg_sprite));
 }
 
 function clean() {
 	return del(path.clean);
 }
 
-const dev = gulp.series(clean, svg, fonts, favicon, libs_css, images_dev, gulp.parallel(html, scss_dev, js_dev, watchingFiles, browserSync));
-const build = gulp.series(clean, svg, fonts, favicon, libs_css, images_build, gulp.parallel(html, scss_dev, js_dev));
+const dev = gulp.series(clean, svg, svg_sprite, fonts, favicon, libs_css, images_dev, gulp.parallel(html, scss_dev, js_dev, watchingFiles, browserSync));
+const build = gulp.series(clean, svg, svg_sprite, fonts, favicon, libs_css, images_build, gulp.parallel(html, scss_dev, js_dev));
 
 exports.favicon = favicon;
 exports.svg = svg;
+exports.svg_sprite = svg_sprite;
 exports.libs_css = libs_css;
 exports.fonts = fonts;
 exports.images_dev = images_dev;

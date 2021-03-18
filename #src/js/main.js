@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
 	// objectFitImages();
 
 	// Табы
@@ -23,40 +24,6 @@ $(document).ready(function () {
 	// 		}
 	// 	})
 	// }
-
-
-	// Swiper
-	// const slider_pag = new Swiper('.pag-hero__slider', {
-	// 	slidesPerView: 'auto',
-	// 	spaceBetween: 45,
-	// 	loop: false,
-	// 	loopedSlides: 1,
-	// 	slideToClickedSlide: true,
-	// 	breakpoints: {
-	// 		320: {
-	// 			spaceBetween: 15,
-	// 		},
-	// 		374: {
-	// 			spaceBetween: 25,
-	// 		},
-	// 		577: {
-	// 			spaceBetween: 35,
-	// 		},
-	// 		625: {
-	// 			spaceBetween: 40,
-	// 		},
-	// 		769: {
-	// 			spaceBetween: 15,
-	// 		},
-	// 		993: {
-	// 			spaceBetween: 30,
-	// 		},
-	// 		1440: {
-	// 			spaceBetween: 45,
-	// 		},
-	// 	}
-	// });
-
 	// function mobileSlider() {
 	// 	if ($(window).innerWidth() <= 1100) {
 	// 		slider_product_main = new Swiper('.new__slider', {
