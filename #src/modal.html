@@ -3,15 +3,19 @@
 	<div class="modal-call__container">
 		<div class="modal-call__content">
 			<div class="modal-call__title">Заказать звонок</div>
-			<form class="wpcf7-form">
-				<span class="wpcf7-form-control-wrap">
-					<input type="text" placeholder="Ваше имя">
-				</span>
-				<span class="wpcf7-form-control-wrap">
-					<input type="tel" placeholder="Номер телефона">
-				</span>
-				<button type="submit" class="modal-call__btn btn">Отправить</button>
-			</form>
+			<!-- wp-form -->
+			<div class="wpcf7">
+				<form class="wpcf7-form">
+					<span class="wpcf7-form-control-wrap">
+						<input type="text" class="wpcf7-form-control" placeholder="Имя">
+					</span>
+					<span class="wpcf7-form-control-wrap">
+						<input type="tel" class="wpcf7-form-control" placeholder="Телефон">
+					</span>
+					<input type="submit" value="Жду звонка" class="wpcf7-form-control wpcf7-submit">
+				</form>
+			</div>
+			<!-- end -->
 			<div class="modal-call__privacy">Нажимая на кнопку «Отправить» вы соглашаетесь с <a class="to-privacy">правилами
 					обработки персональных данных</a></div>
 		</div>
