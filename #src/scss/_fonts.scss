@@ -9,6 +9,7 @@
 	@font-face {
 		font-family: "#{$name}";
 		src: url("../#{$url}.woff2") format("woff2"), url("../#{$url}.woff") format("woff");
+		src: local("#{$name}");
 		font-display: swap;
 		font-weight: $weight;
 		font-style: $style;
