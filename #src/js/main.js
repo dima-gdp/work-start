@@ -10,7 +10,7 @@ $(document).ready(function () {
 	// 	})
 	// }
 
-	// function toggleTabs(top, bottom, topActive) {
+	// function accordion(top, bottom, topActive) {
 	// 	$(top).on('click', function (ev) {
 	// 		let text = $(this).next(bottom);
 
@@ -22,6 +22,25 @@ $(document).ready(function () {
 	// 			$(this).addClass(topActive)
 	// 			text.stop().slideDown();
 	// 		}
+	// 	})
+	// }
+
+	// function accordionCloseOther(top, bottom, activeClass) {
+	// 	$(top).on('click', function (ev) {
+	// 		let text = $(this).next(bottom);
+
+	// 		if ($(this).hasClass(activeClass)) {
+	// 			$(bottom).stop().slideUp();
+	// 			$(top).removeClass(activeClass);
+	// 		}
+
+	// 		else {
+	// 			$(bottom).stop().slideUp();
+	// 			$(top).removeClass(activeClass);
+	// 			$(this).addClass(activeClass);
+	// 			text.stop().slideDown();
+	// 		}
+
 	// 	})
 	// }
 	// function mobileSlider() {
@@ -142,9 +161,4 @@ $(document).ready(function () {
 	// 		return false;
 	// 	}
 	// });
-
-
-
-
-
 });
